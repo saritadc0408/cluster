@@ -11,7 +11,7 @@
   <packagedElement xmi:type="uml:UseCase" xmi:id="_w7JXgL3YEee2DdZOoTln_w" name="luces"/>
   <packagedElement xmi:type="uml:Actor" xmi:id="_xnRdsL3YEee2DdZOoTln_w" name="modulo receptor"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_rE4RQL3kEee2DdZOoTln_w" name="puertas"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_9a5UYL3mEee2DdZOoTln_w" name="cinturon"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_9a5UYL3mEee2DdZOoTln_w" name="ver indicador"/>
   <packagedElement xmi:type="uml:UseCase" xmi:id="_I0HPYL3nEee2DdZOoTln_w" name="reversa"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_pIri8L3nEee2DdZOoTln_w" memberEnd="_pI1T8r3nEee2DdZOoTln_w _pI1T873nEee2DdZOoTln_w">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pI1T8L3nEee2DdZOoTln_w" source="org.eclipse.papyrus">
@@ -68,6 +68,21 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_w647A73nEee2DdZOoTln_w" name="modulo receptor" type="_xnRdsL3YEee2DdZOoTln_w" association="_w647AL3nEee2DdZOoTln_w"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_w647BL3nEee2DdZOoTln_w" name="luces" type="_w7JXgL3YEee2DdZOoTln_w" association="_w647AL3nEee2DdZOoTln_w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_aYjuYMW6Eee-pqPomIYfvw" name="Activity1" node="_wkygAMW6Eee-pqPomIYfvw _9wzOUMW6Eee-pqPomIYfvw _BjuEEMjhEeevd_zBcHCC2Q _ago1oMjWEeetr8MAr4bmgw">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_N7giYMW7Eee-pqPomIYfvw">
+      <body>(modulo de indicadores protegidos)</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_WMs8gMW7Eee-pqPomIYfvw">
+      <body>(modulo de indicador requerido)</body>
+    </ownedComment>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_6Jl5AMjZEeetr8MAr4bmgw" target="_ago1oMjWEeetr8MAr4bmgw" source="_wkygAMW6Eee-pqPomIYfvw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="__YtCMMjZEeetr8MAr4bmgw" target="_9wzOUMW6Eee-pqPomIYfvw" source="_ago1oMjWEeetr8MAr4bmgw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_DXBNsMjhEeevd_zBcHCC2Q" target="_BjuEEMjhEeevd_zBcHCC2Q" source="_ago1oMjWEeetr8MAr4bmgw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_wkygAMW6Eee-pqPomIYfvw" name="abrir modulo de indicadores" outgoing="_6Jl5AMjZEeetr8MAr4bmgw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_9wzOUMW6Eee-pqPomIYfvw" name="accionar modulo de indicadores" incoming="__YtCMMjZEeetr8MAr4bmgw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_ago1oMjWEeetr8MAr4bmgw" name="DecisionNode1" incoming="_6Jl5AMjZEeetr8MAr4bmgw" outgoing="__YtCMMjZEeetr8MAr4bmgw _DXBNsMjhEeevd_zBcHCC2Q"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_BjuEEMjhEeevd_zBcHCC2Q" name="ActivityFinalNode1" incoming="_DXBNsMjhEeevd_zBcHCC2Q"/>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_onZ7UKoyEee8YayMtSEDzA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_onZ7UaoyEee8YayMtSEDzA" source="http://www.eclipse.org/uml2/2.0.0/UML">
